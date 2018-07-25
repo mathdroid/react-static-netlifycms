@@ -1,8 +1,8 @@
-import React from 'react'
-//
+import React from "react";
+import Card from "../components/card";
 
 export default () => (
-  <div>
-    <h1>404 - Oh no's! We couldn't find that page :(</h1>
-  </div>
-)
+  <Card>
+    <h1>404 - Is this loss?</h1>
+  </Card>
+);

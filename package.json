@@ -11,18 +11,25 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "emotion": "^9.2.6",
     "gray-matter": "^3.1.1",
     "klaw": "^2.1.1",
     "moment": "^2.20.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-emotion": "^9.2.6",
     "react-hot-loader": "^4.0.0-beta.21",
     "react-markdown": "^3.1.0",
     "react-moment": "^0.7.0",
     "react-router": "^4.2.0",
-    "react-static": "^5.1.10"
+    "react-static": "^5.1.10",
+    "react-static-plugin-emotion": "^1.0.6",
+    "react-universal-component": "^3.0.0",
+    "reset-css": "^4.0.1"
   },
   "devDependencies": {
+    "babel-plugin-emotion": "^9.2.6",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-config-react-tools": "1.x.x",
     "serve": "^6.1.0"
   }
