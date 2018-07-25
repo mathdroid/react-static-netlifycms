@@ -13,7 +13,13 @@ injectGlobal`
   * {
     box-sizing: inherit;
   }
+  ::-moz-selection { /* Code for Firefox */
+    background: #ff88ff;
+}
 
+::selection {
+    background: #ff88ff;
+}
   html {
     display: flex;
     min-height: 100vh;
