@@ -1,32 +1,43 @@
 import styled from "react-emotion";
+import { Shadow } from "./styles";
 
 const Outer = styled.div`
   display: flex;
+  transition: box-shadow 0.25s;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1;
   border-radius: 0.5rem;
   background: white;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+  box-shadow: ${Shadow.mid} rgba(0, 0, 0, 0.2);
   line-height: 1.5;
   width: 100%;
   margin-bottom: 2rem;
-  transition: height 0.2s;
   min-height: 4rem;
 
   & > * {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
+
+  .react-markdown {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   & img {
     display: block;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
     height: auto;
   }
+
+  ${"" /* &:hover {
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.3);
+  } */};
 `;
 
 export default Outer;

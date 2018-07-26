@@ -16,12 +16,33 @@ const PostCard = styled(Card)`
   .card-title {
     display: flex;
     align-items: center;
-    width: calc(100% - 2rem);
-    margin-top: 1rem;
+    width: 100%;
+    margin: 0;
   }
   .post-title {
-    flex: 1;
-    margin-right: 1rem;
+    flex: 3;
+    padding: 2rem 1rem;
+  }
+
+  time {
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+  .back {
+    border-radius: 0 0.5rem 0 0;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    background: #fafafa;
+    padding: 1rem;
+    flex: 1
+    height: 100%;
+  }
+
+  .back:hover,
+  .back:focus,
+  .back:active {
+    background: #f0f0f0;
   }
 `;
 export default withRouteData(({ post }) => (
@@ -29,10 +50,13 @@ export default withRouteData(({ post }) => (
     <PostCard>
       <div className="card-title">
         <div className="post-title">
-          <H3>{post.data.title}</H3>
           <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
+          <H3>{post.data.title}</H3>
         </div>
-        <Link to="/blog/">Back</Link>
+
+        <Link exact to="/blog/" className="back">
+          back
+        </Link>
       </div>
       <img className="image" src={post.data.thumbnail} alt="" />
       <Markdown
